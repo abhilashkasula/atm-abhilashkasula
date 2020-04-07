@@ -4,7 +4,7 @@
 void display_notes(unsigned int counts) {
   unsigned int notes[] = {1, 5, 10, 20, 50, 100, 500, 2000};
   for(int i = 0; i < 8; i++) {
-    printf("%d notes of RS %u\n", counts & 0xf, notes[i]);
+    printf("%02d notes of RS %04u\n", counts & 0xf, notes[i]);
     counts = counts >> 4;
   }
 }
