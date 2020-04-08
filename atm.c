@@ -5,7 +5,7 @@ count get_money(cash amount) {
   cash remaining = amount;
   cash denominations[8] = DENOMS;
   if(remaining <= LIMIT) {
-    LOOP {
+    for(int i = 0; i < 8; i++) {
       notes = notes << 4;
       notes |= remaining / denominations[i];
       remaining %= denominations[i];
