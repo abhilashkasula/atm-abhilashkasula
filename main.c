@@ -2,10 +2,10 @@
 #include "atm.h"
 
 void display_notes(unsigned int counts) {
-  unsigned int notes[] = {1, 5, 10, 20, 50, 100, 500, 2000};
+  unsigned int notes[] = {2000, 500, 100, 50, 20, 10, 5, 1};
   for(int i = 0; i < 8; i++) {
-    printf("%02d notes of RS %04u\n", counts & 0xf, notes[i]);
-    counts = counts >> 4;
+    printf("%02d notes of RS %04u\n", counts >> 28, notes[i]);
+    counts = counts << 4;
   }
 }
 
