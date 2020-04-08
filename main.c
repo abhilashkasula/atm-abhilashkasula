@@ -3,7 +3,7 @@
 
 void display_notes(count notes) {
   cash denominations[8] = DENOMS;
-  for(int i = 0; i < 8; i++) {
+  LOOP {
     printf("%02d notes of RS %04u\n", notes >> 28, denominations[i]);
     notes = notes << 4;
   }
