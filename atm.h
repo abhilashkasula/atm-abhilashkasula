@@ -19,3 +19,8 @@
   31999 0xf3412014
 */
 unsigned int get_money(unsigned short int);
+
+typedef unsigned short int cash;
+typedef unsigned int count;
+
+#define DENOMS {2000, 500, 100, 50, 20, 10, 5, 1}
